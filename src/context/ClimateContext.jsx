@@ -7,9 +7,9 @@ export const ClimateContext = createContext();
 export const useClimateContext = () => useContext(ClimateContext)
 export const ClimateProvider = ({ children }) => {
     const [ temperature, setTemperature ] = useState(50);
-
+    const [ hygrometer, setHygrometer ] = useState(40);
     return (
-        <ClimateContext.Provider value={{temperature, setTemperature}}>
+        <ClimateContext.Provider value={{temperature, setTemperature, hygrometer, setHygrometer}}>
             { children }
         </ClimateContext.Provider>
     )
