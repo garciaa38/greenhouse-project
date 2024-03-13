@@ -13,12 +13,14 @@ function Thermometer() {
       //Increase currTemp every 1 sec
       setTimeout(() => {
         setCurrTemp(currTemp + 1)
-      }, 1000)
-    } else {
+      }, 1000);
+
+    } else if (temperature < currTemp) {
       //Decrease currTemp every 1 sec
       setTimeout(() => {
         setCurrTemp(currTemp - 1)
-      }, 1000)
+      }, 1000);
+
     }
   }, [currTemp, temperature])
 
